@@ -12,3 +12,7 @@
   - `poseDetection.js`: MediaPipe or ML5 setup for pose detection
   - `globalVariables.js`: global variables that are used in multiple files
   - TBD: `p5drawPose.js`: P5 sketch for drawing the pose (abstract avatar?)
+
+## Refernces
+- [MediaPipe Pose Landmark Detection for web](https://developers.google.com/mediapipe/solutions/vision/pose_landmarker/web_js)
+- [Pose Landmark Point Definitions](https://developers.google.com/mediapipe/solutions/vision/pose_landmarker#pose_landmarker_model)
