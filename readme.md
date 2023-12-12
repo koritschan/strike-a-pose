@@ -1,6 +1,6 @@
 # Strike a Pose
 ## A simple pose controlled game
-#### ZHdK 2023 | CAS Coding for the Arts | Machine Learning | Magdalena Kalin, Vera Schürch and Michael Koritschan
+#### ZHdK 2023 | CAS Coding for the Arts | Machine Learning | Michael Koritschan
 
 ## File Structure
 - `readme.md`: this file
