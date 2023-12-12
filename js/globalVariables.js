@@ -17,3 +17,5 @@ let leftKneePosition = [];
 let rightKneePosition = [];
 let leftToePosition = [];
 let rightToePosition = [];
+let leftAnklePosition = [];
+let rightAnklePosition = [];

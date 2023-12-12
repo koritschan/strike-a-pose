@@ -92,6 +92,8 @@ async function predictWebcam() {
             rightKneePosition = [landmark[25].x, landmark[25].y, landmark[25].z];
             leftToePosition = [landmark[32].x, landmark[32].y, landmark[32].z];
             rightToePosition = [landmark[31].x, landmark[31].y, landmark[31].z];
+            leftAnklePosition = [landmark[28].x, landmark[28].y, landmark[28].z];
+            rightAnklePosition = [landmark[27].x, landmark[27].y, landmark[27].z];
 
             drawingUtils.drawConnectors(landmark, PoseLandmarker.POSE_CONNECTIONS);
         }
