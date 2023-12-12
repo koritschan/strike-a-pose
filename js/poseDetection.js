@@ -82,6 +82,8 @@ async function predictWebcam() {
         nosePosition = [landmark[0].x, landmark[0].y];
         leftHandPosition = [landmark[16].x, landmark[16].y];
         rightHandPosition = [landmark[15].x, landmark[15].y];
+        leftElbowPosition = [landmark[14].x, landmark[14].y];
+        rightElbowPosition = [landmark[13].x, landmark[13].y];
         leftShoulderPosition = [landmark[12].x, landmark[12].y];
         rightShoulderPosition = [landmark[11].x, landmark[11].y];
         leftHipPosition = [landmark[24].x, landmark[24].y];

@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .center {
@@ -15,7 +15,6 @@
 @use "@material";
 body {
   font-family: roboto;
-  margin: 2em;
   color: #3d3d3d;
   --mdc-theme-primary: #007f8b;
   --mdc-theme-on-primary: #f1f3f4;
@@ -35,7 +34,7 @@ em {
 
 video {
   clear: both;
-  display: block;
+  display: none;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -44,6 +43,9 @@ video {
 section {
   opacity: 1;
   transition: opacity 500ms ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header,
@@ -102,6 +104,7 @@ footer {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+  display: none;
 }
 
 .detectOnClick {
