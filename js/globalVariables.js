@@ -1,3 +1,3 @@
-let obstacles = [];
-let avatar = [];
+let obstacles = []; // or classes?
+let avatar = []; // or classes?
 let overlapping = false;
