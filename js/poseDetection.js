@@ -70,32 +70,32 @@ async function predictWebcam() {
   if (lastVideoTime !== video.currentTime) {
     lastVideoTime = video.currentTime;
     poseLandmarker.detectForVideo(video, startTimeMs, function (result) {
-      canvasCtx.save();
-      canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-      for (const landmark of result.landmarks) {
-        drawingUtils.drawLandmarks(landmark, {
-          radius: function (data) {
-            return DrawingUtils.lerp(data.from.z, -0.15, 0.1, 5, 1);
-          },
-        });
-        // generate Avatar coordinates
-        nosePosition = [landmark[0].x, landmark[0].y];
-        leftHandPosition = [landmark[16].x, landmark[16].y];
-        rightHandPosition = [landmark[15].x, landmark[15].y];
-        leftElbowPosition = [landmark[14].x, landmark[14].y];
-        rightElbowPosition = [landmark[13].x, landmark[13].y];
-        leftShoulderPosition = [landmark[12].x, landmark[12].y];
-        rightShoulderPosition = [landmark[11].x, landmark[11].y];
-        leftHipPosition = [landmark[24].x, landmark[24].y];
-        rightHipPosition = [landmark[23].x, landmark[23].y];
-        leftKneePosition = [landmark[26].x, landmark[26].y];
-        rightKneePosition = [landmark[25].x, landmark[25].y];
-        leftToePosition = [landmark[32].x, landmark[32].y];
-        rightToePosition = [landmark[31].x, landmark[31].y];
+        canvasCtx.save();
+        canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+        for (const landmark of result.landmarks) {
+            drawingUtils.drawLandmarks(landmark, {
+                radius: function (data) {
+                    return DrawingUtils.lerp(data.from.z, -0.15, 0.1, 5, 1);
+                },
+            });
+            // generate Avatar coordinates
+            nosePosition = [landmark[0].x, landmark[0].y, landmark[0].z];
+            leftHandPosition = [landmark[16].x, landmark[16].y, landmark[16].z];
+            rightHandPosition = [landmark[15].x, landmark[15].y, landmark[15].z];
+            leftElbowPosition = [landmark[14].x, landmark[14].y, landmark[14].z];
+            rightElbowPosition = [landmark[13].x, landmark[13].y, landmark[13].z];
+            leftShoulderPosition = [landmark[12].x, landmark[12].y, landmark[12].z];
+            rightShoulderPosition = [landmark[11].x, landmark[11].y, landmark[11].z];
+            leftHipPosition = [landmark[24].x, landmark[24].y, landmark[24].z];
+            rightHipPosition = [landmark[23].x, landmark[23].y, landmark[23].z];
+            leftKneePosition = [landmark[26].x, landmark[26].y, landmark[26].z];
+            rightKneePosition = [landmark[25].x, landmark[25].y, landmark[25].z];
+            leftToePosition = [landmark[32].x, landmark[32].y, landmark[32].z];
+            rightToePosition = [landmark[31].x, landmark[31].y, landmark[31].z];
 
-        drawingUtils.drawConnectors(landmark, PoseLandmarker.POSE_CONNECTIONS);
-      }
-      canvasCtx.restore();
+            drawingUtils.drawConnectors(landmark, PoseLandmarker.POSE_CONNECTIONS);
+        }
+        canvasCtx.restore();
     });
   }
 
